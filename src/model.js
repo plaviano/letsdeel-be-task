@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize');
+const {Op} = require('sequelize');
 
 const sequelize = new Sequelize({
   dialect: 'sqlite',
@@ -81,6 +82,23 @@ Profile.hasMany(Contract, {as : 'Client', foreignKey:'ClientId'})
 Contract.belongsTo(Profile, {as: 'Client'})
 Contract.hasMany(Job)
 Job.belongsTo(Contract)
+
+Contract.queryUserBelongingContracts = function (profileId) {
+  return {
+    [Op.or]: {
+      ContractorId: profileId,
+      ClientId: profileId
+    }
+  }
+}
+
+Contract.queryActiveContracts = function () {
+  return {
+    status: {
+      [Op.notIn]: ['terminated']
+    }
+  }
+}
 
 module.exports = {
   sequelize,
