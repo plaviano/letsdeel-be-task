@@ -26,8 +26,6 @@ class AdminController extends BaseController {
     }] };
 
     if(start) {
-      const startDate = Date.parse(start);
-      console.log(startDate);
       dateFilter[Op.and].push({
         paymentDate: {
           [Op.gte]: start
@@ -97,8 +95,6 @@ class AdminController extends BaseController {
     }] };
 
     if(start) {
-      const startDate = Date.parse(start);
-      console.log(startDate);
       dateFilter[Op.and].push({
         paymentDate: {
           [Op.gte]: start

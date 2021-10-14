@@ -1,9 +1,13 @@
 const { Profile, Contract, Job } = require('../src/model');
 
-/* WARNING THIS WILL DROP THE CURRENT DATABASE */
-seed();
+if (require.main === module) {
+  /* WARNING THIS WILL DROP THE CURRENT DATABASE */
+  seed();
+} else {
+  // console.log('required as a module');
+}
 
-async function seed() {
+async function seed(callback) {
   // create tables
   await Profile.sync({ force: true });
   await Contract.sync({ force: true });
@@ -225,6 +229,7 @@ async function seed() {
       paymentDate:'2020-08-14T23:11:26.737Z',
       ContractId: 3,
     }),
-    
-  ]);
+  ])
 }
+
+module.exports = { seed }
