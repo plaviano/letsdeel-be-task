@@ -128,7 +128,7 @@ Thank you and good luck! 🙏
 # Additions 
 ## Swagger UI
 
-For this test I implemented the auto generation of Swagger UI using `swagger-jsdoc` and `swagger-ui-express`. After starting the project with `npm start` you can go to `http://localhost:3001/api-docs` to use the UI.
+For this test I implemented the auto generation of Swagger UI using `swagger-jsdoc` and `swagger-ui-express` alongside with the comments in the code. After starting the project with `npm start` you can go to `http://localhost:3001/api-docs` to use the UI.
 
 * There is an issue for the api endpoints that requires params like ***POST*** `/balances/deposit/{userId}`. So make sure to add the param value to try it out. If you click to Try it Out and it gets stuck on loading, just reload the page.
 

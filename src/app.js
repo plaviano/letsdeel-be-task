@@ -25,17 +25,17 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerDefinition = {
     openapi: '3.0.0',
     info: {
-      title: 'Express API for JSONPlaceholder',
+      title: 'Express API for Let\' Deel BE Task Assignment',
       version: '1.0.0',
       description:
-        'This is a REST API application made with Express. It retrieves data from JSONPlaceholder.',
+        'This is a REST API application made with Express. It retrieves data from Let\' Deel BE Task Assignment.',
       license: {
         name: 'Licensed Under MIT',
         url: 'https://spdx.org/licenses/MIT.html',
       },
       contact: {
-        name: 'JSONPlaceholder',
-        url: 'https://jsonplaceholder.typicode.com',
+        name: 'Let\' Deel BE Task Assignment',
+        url: 'https://github.com/letsdeel/BE-Template',
       },
     },
     servers: [
