@@ -124,3 +124,15 @@ When you have finished the assignment, create a github repository and send us th
   
 
 Thank you and good luck! 🙏
+
+# Additions 
+## Swagger UI
+
+For this test I implemented the auto generation of Swagger UI using `swagger-jsdoc` and `swagger-ui-express`. After starting the project with `npm start` you can go to `http://localhost:3001/api-docs` to use the UI.
+
+* There is an issue for the api endpoints that requires params like ***POST*** `/balances/deposit/{userId}`. So make sure to add the param value to try it out. If you click to Try it Out and it gets stuck on loading, just reload the page.
+
+
+## Testing
+
+Base test cases were implemented using `mocha`, `chai` and `chai-request`. Just execute `npm test` to see them running.
